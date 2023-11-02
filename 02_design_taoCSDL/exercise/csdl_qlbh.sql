@@ -1,11 +1,11 @@
 create database bt_2_2;
 use  bt_2_2;
 
-create table customer(
-	c_id int ,
-	c_name varchar(50),
-	c_age int,
-    primary key(c_id)
+CREATE TABLE customer (
+    c_id INT,
+    c_name VARCHAR(50),
+    c_age INT,
+    PRIMARY KEY (c_id)
 );
 
 create table order_dh(
