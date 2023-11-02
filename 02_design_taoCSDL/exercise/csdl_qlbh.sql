@@ -3,8 +3,8 @@ use  bt_2_2;
 
 create table customer(
 	c_id int ,
-    c_name varchar(50),
-    c_age int,
+	c_name varchar(50),
+	c_age int,
     primary key(c_id)
 );
 
