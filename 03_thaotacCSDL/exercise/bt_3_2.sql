@@ -1,3 +1,5 @@
+-- from database database bt_2_2;
+
 SELECT * FROM customer WHERE c_id IN (SELECT c_id FROM order_dh); -- test truy van con(sub query)
 
 -- Hiển thị các thông tin  gồm oID, oDate, oPrice của tất cả các hóa đơn trong bảng Order
