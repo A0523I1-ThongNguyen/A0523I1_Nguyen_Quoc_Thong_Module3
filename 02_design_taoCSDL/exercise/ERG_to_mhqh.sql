@@ -63,4 +63,13 @@ MaNCC int auto_increment,
 SDT varchar(20),
 foreign key(mancc) references nha_cung_cap(ma_nhacc)
 );
+DROP INDEX bsx ON sdt;
+CREATE INDEX bsx2 ON sdt (SDT);
+CREATE VIEW my_view AS SELECT SDT FROM sdt;
+DROP VIEW my_view;
 
+CREATE PROCEDURE get_customer(IN customer_id INT)
+BEGIN 
+SELECT * FROM customers 
+WHERE id = customer_id;
+END;
