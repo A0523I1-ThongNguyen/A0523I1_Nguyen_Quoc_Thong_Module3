@@ -11,7 +11,7 @@ create table Products (
 	productStatus varchar(50)
     );
     insert into Products(productCode,productName,productPrice,productAmount,productDescription,productStatus)
-	values (1,'Bánh',5.000,2,'Ngon','on'),(2,'Kẹo',2.000,5,'Ngọt','off'),(3,'Trai Cay',10.000,5,'chua','off'),(2,'dau phong',5.000,5,'la','off');
+	values (1,'socola',5.000,2,'Ngon','on'),(2,'hat dua',2.000,5,'Ngọt','off'),(3,'Trai Cay',10.000,5,'chua','off'),(2,'dau phong',5.000,5,'la','off');
     
     -- thêm cột 
     ALTER TABLE Products ADD new_pro int;
@@ -61,14 +61,7 @@ where productName='pepsi' and productPrice=2;
 drop view view_product;
 
 -- Tạo store procedure lấy tất cả thông tin của tất cả các sản phẩm trong bảng product
-delimiter //
-create procedure m_product()
-begin
-select * from Products;
-end //
-delimiter ;
 
-call m_product();
 
 delimiter //
 create procedure m2_product()
@@ -83,21 +76,7 @@ call m2_product();
 
 
 -- Tạo store procedure thêm một sản phẩm mới
-delimiter //
-create procedure add_new_product(new_productCode int,new_productName varchar(50),new_productPrice double,
-new_productAmount double,new_productDescription varchar(50),new_productStatus bit) 
-begin
-insert into Products(productCode,productName,productPrice,productAmount,productDescription,productStatus)
-value (new_productCode,new_productName,new_productPrice,new_productAmount,new_productDescription,new_productStatus);
-end //
 
-delimiter ;
-
-call add_new_product(4,'Coca',10.000,3,'Ngon',1);
-
--- delete record 
-delete from Products p
-where p.id like 7;
 
 delimiter //
 create procedure add_product2(new_pcode int , new_pname varchar(50),new_price double,new_pamount double, new_pdescription varchar(50),new_pstatus varchar(50))
@@ -110,17 +89,7 @@ delimiter;
 call add_product2(99,'sting',11.000,2,'do',1);
 
 -- Tạo store procedure sửa thông tin sản phẩm theo id
-delimiter //
-create procedure fix_id(in id2 int, in new_productName varchar(50), in new_productPrice double)
-begin
-update products
-set productName=new_productName, productPrice=new_productPrice
-where(id2=id);
-end //
 
-delimiter ;
-
-call fix_id(12,'bo huc',12.000);
 
 delimiter //
 create procedure fix_id2(fix_id int , new_pname varchar(50), new_pprice double,new_pdescription varchar(50))
@@ -136,16 +105,7 @@ call fix_id2(1,'banh chung','8.000','mem');
 drop procedure fix_id;
 
 -- Tạo store procedure xoá sản phẩm theo id
-delimiter //
-create procedure delete_id(in id2 int)
-begin
-delete from Products
-where(id=id2);
-end //
 
-delimiter ;
-
-call delete_id(12); -- bohuc
 
 delimiter //
 create procedure delete_id2(del_id int)
