@@ -42,6 +42,12 @@ ten_nhacc varchar(50),
 diachi varchar(50)
 );
 
+create table sdt(
+MaNCC int auto_increment,
+SDT varchar(20),
+foreign key(mancc) references nha_cung_cap(ma_nhacc)
+);
+
 create table don_dat_hang(
 so_dhang int primary key,
 ngay_dhang date, 
@@ -58,11 +64,7 @@ create table vattu_dondathang(
 );
  
 
-create table sdt(
-MaNCC int auto_increment,
-SDT varchar(20),
-foreign key(mancc) references nha_cung_cap(ma_nhacc)
-);
+
 DROP INDEX bsx ON sdt;
 CREATE INDEX bsx2 ON sdt (SDT);
 CREATE VIEW my_view AS SELECT SDT FROM sdt;
@@ -72,4 +74,3 @@ CREATE PROCEDURE get_customer(IN customer_id INT)
 BEGIN 
 SELECT * FROM customers 
 WHERE id = customer_id;
-END;

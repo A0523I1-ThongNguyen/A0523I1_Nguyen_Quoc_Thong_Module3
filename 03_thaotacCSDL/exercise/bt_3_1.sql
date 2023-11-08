@@ -19,6 +19,10 @@ CREATE TABLE Student
     ClassId     INT         NOT NULL,
     FOREIGN KEY (ClassId) REFERENCES Class (ClassID)
 );
+select s.StudentId,s.StudentName,avg(m.Mark)
+from student s
+join mark m on s.StudentId = m.StudentId
+group by s.StudentId;
 
 CREATE TABLE Subject
 (

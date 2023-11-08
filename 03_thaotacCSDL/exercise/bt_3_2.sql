@@ -1,4 +1,4 @@
--- from database database bt_2_2;
+-- from database bt_2_2;
 
 SELECT * FROM customer WHERE c_id IN (SELECT c_id FROM order_dh); -- test truy van con(sub query)
 
@@ -26,7 +26,7 @@ SELECT c.c_name , od.o_id ,c.c_id
 FROM customer c
 LEFT JOIN order_dh o ON c.c_id = o.c_id
 LEFT JOIN OrderDetail od ON o.o_id = od.o_id
-WHERE o.c_id IS NULL; -- WHERE od.o_id IS NULL;
+WHERE o.c_id IS NULL; -- WHERE o.c_id IS NULL sử dụng để lọc ra các khách hàng k có đơn hàng (các bản ghi trong bảng "customer" không có bản ghi tương ứng trong bảng "order_dh").
 
 -- Hiển thị mã hóa đơn, ngày bán và giá tiền của từng hóa đơn (giá một hóa đơn được tính bằng tổng giá bán của từng loại mặt hàng xuất hiện trong hóa đơn.
 -- Giá bán của từng loại được tính = odQTY*pPrice)
@@ -39,10 +39,16 @@ on od.p_id = p.p_id
 group by o.o_id;
 
 
-SELECT o.o_id, o.o_date,  SUM(od.quantity * p.p_price) AS 'tong' 
+-- Hiển thị mã hóa đơn, ngày bán và giá tiền của từng hóa đơn (giá một hóa đơn được tính bằng tổng giá bán của từng loại mặt hàng xuất hiện trong hóa đơn. Giá bán của từng loại được tính = odQTY*pPrice)
+SELECT o.o_id, o.o_date,  SUM(od.quantity * p.p_price) AS 'tong' -- , min(od.quantity) tach nhieu cot
 FROM order_dh o
 JOIN OrderDetail od 
 ON o.o_id = od.o_id
 JOIN product p
 ON od.p_id = p.p_id
 GROUP BY o.o_id;
+
+SELECT product.*, count(product.p_id) FROM order_dh
+WHERE product.name = 'Motor'
+GROUP BY productVendor
+HAVING COUNT(productCode) > 10;
