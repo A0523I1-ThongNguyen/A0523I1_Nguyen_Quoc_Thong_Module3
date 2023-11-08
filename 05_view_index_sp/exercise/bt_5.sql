@@ -13,12 +13,7 @@ create table Products (
     insert into Products(productCode,productName,productPrice,productAmount,productDescription,productStatus)
 	values (1,'socola',5.000,2,'Ngon','on'),(2,'hat dua',2.000,5,'Ngọt','off'),(3,'Trai Cay',10.000,5,'chua','off'),(2,'dau phong',5.000,5,'la','off');
     
-    -- thêm cột 
-    ALTER TABLE Products ADD new_pro int;
-    
-    -- xóa cột 
-    ALTER TABLE Products
-    DROP COLUMN new_pro;
+
     
 -- Tạo Unique Index trên bảng Products (sử dụng cột productCode để tạo chỉ mục)
 create unique index unique_index
@@ -117,4 +112,4 @@ delimiter ;
 
 call delete_id2(11);
 
-drop procedure delete_id;
+drop procedure delete_id2;
