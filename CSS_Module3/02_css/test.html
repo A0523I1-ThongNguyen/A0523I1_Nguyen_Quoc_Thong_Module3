@@ -1,0 +1,70 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport"
+          content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+</head>
+<style>
+
+    p {
+        background-color: #0a53be;
+        width: 100px;
+        height: 100px;
+        margin: 0;
+        display: block;
+        text-align: center;
+        overflow: hidden
+    }
+
+   ul{
+      display: flex;
+  }
+   .con{
+       width: 50px;
+       height: 50px;
+       background-color: green;
+   }
+    .cha{
+        display: flex;
+        flex-direction: row; /*căn theo chiều ngang mặc định */
+        justify-content: center;/*căn theo chiều đã chọn (row) -- flex-star-end */
+        align-items: flex-end; /*căn theo chiều còn lại */
+        height: 500px;
+        background-color: #0a58ca;
+        transition: width 2s, height 2s, transform 2s;
+    }
+    /*.two{*/
+    /*    transform: translateX(-300%);*/
+    /*    transition-delay: 1s;*/
+    /*    align-self: center;*/
+    /*    padding: 100px;*/
+    /*    text-align: center;*/
+    /*}*/
+</style>
+
+<div class="cha">
+    <div class="con">1</div>
+    <div class="con two">2</div>
+    <div class="con">3</div>
+    <div class="con">4</div>
+    <div class="con">5</div>
+</div>
+
+<!--<body>-->
+<!--<p>fsfasfas</p>-->
+<!--<p>USA</p>-->
+
+<!--<span>Japan</span>-->
+<!--<span>Japan</span>-->
+
+<!--<ul>-->
+<!--    <li>mot</li>-->
+
+<!--    <li>hai</li>-->
+
+<!--    <li>ba</li>-->
+<!--</ul>-->
+</body>
+</html>

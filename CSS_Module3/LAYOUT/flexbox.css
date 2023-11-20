@@ -1,0 +1,8 @@
+.nav{
+   min-height: 42px;
+    background-color: orangered;
+}
+.nav-list{
+    padding-left: 0;
+    margin: auto 16px;
+}

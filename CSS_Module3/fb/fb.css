@@ -1,0 +1,286 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.head {
+    position: relative;
+    height: 51px;
+}
+
+header {
+    position: fixed;
+    max-height: 56px;
+    border-bottom: 1px solid black;
+}
+
+.menu {
+    padding: 5px 0;
+    display: flex;
+}
+
+.menu-list ul{
+    list-style: none;
+    display: flex;
+}
+
+.fb-picture i{
+    font-size: 40px;
+    margin: 0 10px;
+}
+
+.menu-list p{
+    height: 40px;
+    width: 240px;
+    border-radius: 20px;
+    background-color: #c3c6caeb;
+}
+
+.menu-list ul li p input {
+    height: 38px;
+    width: 203px;
+    border: 1px solid #c3c6caeb;
+    border-radius: 20px;
+    margin-left: 35px;
+    background-color: #c3c6caeb;
+}
+
+.search i {
+    color: #81949a;
+    font-size: 18px;
+    position: absolute;
+    left: 72px;
+    top: 17px;
+}
+
+.menu-list2 {
+    margin-left: 222px;
+}
+
+.menu-list2 .list{
+    list-style: none;
+    display: flex;
+}
+
+.menu-list2 .list li {
+    margin-left: 3px;
+}
+
+.menu-list2 .list li a{
+    color: black;
+    font-size: 20px;
+    padding: 9px 35px;
+    display: block;
+}
+
+.menu-list2 .list li:hover {
+    background-color: #c3c6caeb;
+    border-radius: 10px;
+}
+
+.menu-list3 {
+    margin-left: 297px;
+}
+
+.menu-list3 ul{
+    display: flex;
+    list-style: none;
+}
+
+.menu-list3 ul li {
+    border-radius: 100px;
+    background-color: #c3c6caeb;
+    margin-left: 10px;
+}
+
+.menu-list3 ul li a{
+    color: black;
+    font-size: 20px;
+    padding: 9px 12px;
+    display: block;
+}
+
+.menu-list3 ul li:hover {
+    background-color: lightgrey;
+    border-radius: 100px;
+}
+
+.after {
+    position: relative;
+}
+
+section {
+    position: fixed;
+    top:51px;
+    width: 22%;
+    height: 100%;
+    float: left;
+}
+
+section:hover {
+    overflow: scroll;
+}
+
+nav {
+    border-bottom: 1px solid lightgrey;
+}
+
+.list-left {
+    padding-top: 10px;
+}
+
+.list-left .list-left-menu ul{
+    display: flex;
+    list-style: none;
+}
+
+.list-left .list-left-menu ul li a{
+    color: black;
+    font-size: 25px;
+    margin-right: 10px;
+}
+
+.list-left .list-left-menu {
+    padding: 10px;
+    margin-left: 5px;
+    border-radius: 10px;
+}
+
+.list-left .list-left-menu ul li p {
+    position: relative;
+    top: 5px;
+}
+
+.list-left .list-left-menu:hover {
+    background-color: lightgrey;
+    border-radius: 10px;
+}
+
+article {
+    background-color: white;
+    height: 100%;
+    top:51px;
+    left: 22%;
+    width: 56%;
+    float: left;
+    position: relative;
+}
+
+.content {
+    height: 100%;
+    margin: 0 15%;
+    background-color: white;
+    position: absolute;
+}
+
+.content .content-list div {
+    padding-top: 10px;
+}
+
+.content .content-list div ul {
+    list-style: none;
+    margin-bottom: 10px;
+}
+
+.content-list div .post li a {
+    color: black;
+    font-size: 20px;
+    padding: 9px 12px;
+    border-radius: 100px;
+    background-color: #c3c6caeb;
+    margin-left: 15px;
+}
+
+.content-list div .post li a:hover {
+    background-color: lightgrey;
+}
+
+.content-list div .post li p {
+    margin-left: 15px;
+}
+
+.content-list div .post li {
+    padding: 8px 0;
+}
+
+.content-list div .post li img {
+    height: 100%;
+    width: 100%;
+}
+
+.content-list .comment{
+    display: flex;
+    justify-content: center;
+}
+
+
+.content-list .comment li a {
+    text-decoration: none;
+    color: black;
+    padding: 6px 57px;
+    display: block;
+}
+
+.content-list .comment li:hover {
+    background-color: lightgrey;
+    border-radius: 8px;
+}
+
+aside {
+    width: 22%;
+    height: 100%;
+    position: fixed;
+    top: 51px;
+    right: 0;
+    float: right;
+}
+
+aside:hover {
+    overflow: scroll;
+}
+
+.list-right .menu-list-right nav span {
+    padding-top:15px;
+    padding-left: 13px;
+    padding-bottom: 10px;
+    display: block;
+    font-weight: bold;
+    color: #94979c;
+}
+
+.list-right .menu-list-right div ul li img {
+    height: 130px;
+    width: 130px;
+    border-radius: 20px;
+}
+
+.list-right .menu-list-right div {
+    padding: 5px 10px;
+}
+
+.list-right .menu-list-right div ul {
+    display: flex;
+    list-style: none;
+}
+
+.list-right .menu-list-right div ul li p {
+    font-weight: bold;
+    position: relative;
+    top: 53px;
+    left: 11px;
+}
+
+.list-right .menu-list-right {
+    padding: 0 5px;
+    margin-bottom: 5px;
+}
+
+.list-right .menu-list-right div:hover {
+    background-color: lightgrey;
+    border-radius: 10px;
+}
+
+.list-right {
+    border-bottom: 1px solid lightgrey;
+}

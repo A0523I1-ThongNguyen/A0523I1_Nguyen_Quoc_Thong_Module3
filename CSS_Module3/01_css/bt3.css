@@ -1,0 +1,36 @@
+
+.anh {
+    display: inline-block;
+    width: 200px;
+    /*margin-left: 650px; sài cái này khi màn hình khác sẽ mặc định 650px */
+}
+h1 {
+    text-align: center;
+}
+
+.toc {
+    text-align: center;
+}
+
+.toc ul {
+    padding: 0;
+}
+
+.toc li {
+    display: inline-block;
+    margin-right: 50px;
+    font-size: 20px;
+}
+
+.content {
+    text-indent: 25px;
+    margin: 20px;
+}
+
+.mucluc h2{
+    display: inline-block;
+    color: brown;
+}
+.mucluc p{
+    font-size: 20px;
+}

@@ -1,4 +1,4 @@
--- BT 4
+-- BT 4 > databas quanlysinhvien
 -- 1. Hiển thị tất cả các thông tin môn học (bảng subject) có credit lớn nhất.
 select subject.*
 from subject
@@ -11,7 +11,21 @@ from subject s
 join Mark m
 on s.SubId = m.SubId
 where m.Mark in (select max(Mark) from Mark);
--- cach 2: dung giam dan desc + limit
+
+select  s.SubId ,s.SubName,m.Mark 'Diem Thi Tot Nhat'
+from subject s
+join Mark m
+on s.SubId = m.SubId -- kết hợp thông tin từ hai bảng và trả về các môn học có điểm thi cao nhất.
+join student st on st.StudentId = m.StudentId -- tại sao phải join bảng student mới select student.StudentName dc?
+where m.Mark in (select max(Mark) from Mark);
+
+-- cach 2: 
+SELECT s.SubName, MAX(m.Mark) AS MaxMark
+FROM Subject s
+JOIN Mark m ON s.SubId = m.SubId
+GROUP BY s.SubName;
+
+-- cach 3: dung giam dan desc + limit
 select s.SubId ,s.SubName, m.Mark 'Diem Thi Tot Nhat'
 from subject s
 join Mark m
@@ -34,3 +48,6 @@ join Mark m
 on s.StudentID=m.StudentID
 group by s.StudentID,s.StudentName
 order by mark desc;
+
+insert into mark(markID,SubID,StudentID,Mark) -- bảng con mark phải tạo SubID , StudentID trùng với bảng cha  student + subject 
+values (199,4,8,15);
