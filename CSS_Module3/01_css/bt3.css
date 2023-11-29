@@ -1,36 +1,72 @@
-
-.anh {
-    display: inline-block;
-    width: 200px;
-    /*margin-left: 650px; sài cái này khi màn hình khác sẽ mặc định 650px */
-}
-h1 {
-    text-align: center;
-}
-
-.toc {
-    text-align: center;
-}
-
-.toc ul {
+* {
+    box-sizing: border-box;
+    margin: 0;
     padding: 0;
 }
 
-.toc li {
-    display: inline-block;
-    margin-right: 50px;
-    font-size: 20px;
+header {
+    background-color: green;
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
-.content {
-    text-indent: 25px;
-    margin: 20px;
+header img{
+    width: auto;
+    height: 600px;
+}
+nav {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.mucluc{
+    margin: 20px 0 0 0 ;
+}
+a{
+    text-decoration: none;
+}
+.c1{
+    margin: 20px 0 0 0;
+}
+a:hover{
+    color: red;
+}
+.c1 a{
+    margin: 10px;
+    border-left: 1px solid black;
+    border-right: 1px solid black;
+}
+.c1a{
+    padding: 0 8px;
+    color: black;
+}
+.gioithieu{
+    text-indent: 30px;
+    margin: 10px 10px;
+}
+.chap{
+    background-color: darkcyan;
+    width: 80%;
+    margin: 100px 50px ;
+
 }
 
-.mucluc h2{
-    display: inline-block;
-    color: brown;
+.ch{
+    margin-top: 150px;
+    color: #e4e6eb;
+    font-weight: bold;
 }
-.mucluc p{
-    font-size: 20px;
+
+.img-ch{
+    height: 300px;
+    width: 500px;
+    margin: 20px 0px;
+}
+
+.d {
+    text-indent: 30px;
+    color: #2c0b0e;
+    font-weight: bold;
+    font-size: 25px;
 }

@@ -1,31 +1,49 @@
-body {
-    font-family: Verdana,sans-serif;
-    font-size: 0.9em;
-}
-
-header, footer {
-    padding: 10px;
-    color: white;
-    background-color: black;
-}
-
-section {
-    margin: 5px;
-    padding: 10px;
-    background-color: lightgrey;
-}
-
-article {
-    margin: 5px;
-    padding: 10px;
-    background-color: white;
-}
-
-nav ul {
+*{
+    box-sizing: border-box;
+    margin: 0;
     padding: 0;
 }
+header , footer {
+    background-color: black;
+    padding: 20px;
+    color: white;
+    margin: 10px;
+}
 
-nav ul li {
-    display: inline;
-    margin: 5px;
+div ul li{
+    display: inline-block;
+    margin: 10px;
+}
+
+section{
+    background-color: gray;
+    margin: 10px;
+    float: left;
+    width: 60%;
+}
+
+.new{
+    margin: 15px;
+}
+article{
+    background-color: white;
+    margin: 10px;
+    padding: 30px;
+}
+aside{
+    float: right;
+    width: 40%;
+    background-color: gray;
+    height: 382px;
+    width: 600px;
+}
+aside img{
+    height: 382px;
+    width: 600px;
+    border: 1px solid black;
+}
+
+footer{
+    clear: both;
+    text-align: center;
 }

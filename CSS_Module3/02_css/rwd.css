@@ -1,198 +1,108 @@
 * {
+    box-sizing: border-box;
     margin: 0;
     padding: 0;
-    font-family: "Times New Roman", sans-serif;
-    box-sizing: border-box;
 }
 
 header {
-    background-color: gray;
+    background-color: black;
+
 }
 
-div {
+.menu {
     display: flex;
     justify-content: space-between;
-    justify-items: center;
+    align-items: center;
 }
 
-div ul {
+.menu ul {
     list-style: none;
     display: flex;
-    margin: 0;
-    padding: 0;
+    padding: 10px;
+    margin: 5px;
 }
 
-main_menu main_menu_log li a{ /**/
-    margin: 20px;
+.menu ul li {
+    padding: 10px;
+    margin: 5px;
 }
 
-.main_menu li a {
-    color: white;
+.menu li a {
     text-decoration: none;
-    width: 100px;
-    height: 70px;
-    padding: 26px;
-    border: 1px solid red;
-    display: block;
-
-}
-
-.main_menu li:hover {
-    background-color: black;
+    color: white;
 }
 
 section {
-    width: 100%;
+
 }
 
-.main_1 {
-    /*float: left;*/
-    width: 100%;
-    height: auto;
-    background-color: #f1f1f1;
+.ar1 {
+    background-color: gray;
+    float: left;
+    width: 20%;
+    height: 650px;
 }
 
-.main_1 ul {
-    list-style: none;
+.ar2 {
+    background-color: gray;
+    float: right;
+    width: 20%;
+    height: 650px;
+
+}
+
+.ar1 ul li {
     text-align: center;
-    padding-top: 20px;
+    margin-top: 20px;
 }
 
-.main_1 li a {
+.ar1 ul li a {
     text-decoration: none;
-    display: block;
-    padding-top: 8px;
+    font-size: 20px;
+}
+
+ul li a:hover {
     color: blue;
 }
 
-.main_2 {
-    /*float: left;*/
-    width: 100%;
-    height: auto;
-    padding: 15px;
+.ar2 .d1 {
+    background-color: tan;
 }
 
-.main_2 h1 {
-    font-size: 40px;
-    margin-bottom: 10px;
+.ar2 .d1 {
+    margin: 20px;
+    padding: 50px;
+    text-align: center;
+    font-size: 35px;
 }
 
-.main_2 p {
-    text-indent: 15px;
-    margin-bottom: 30px;
-    display: block;
-}
-
-.main_2 div {
-    border-bottom: 2px solid #f1f1f1;
-}
-
-.main_3 {
-    /*float: left;*/
-    width: 100%;
-    height: auto;
-    background-color: #f1f1f1;
-}
-
-.main_3 ul {
-    list-style: none;
-}
-
-.main_3-menu li a {
+a {
     text-decoration: none;
     color: black;
-    padding: 30px;
-    display: block;
-    text-align: center;
 }
 
-.main_3-menu div {
-    padding: 20px 60px;
+.d1:hover {
+    background-color: darkblue;
 }
 
-.main_3-menu div li {
-    border: 1px solid black;
-}
-
-article {
-    height: 500px;
+#content {
+    float: left;
+    width: 58%;
+    margin: 10px;
 }
 
 footer {
-    text-align: center;
+    background-color: black;
     clear: both;
-    background-color: rgb(0, 0, 0, 0.8);
+    /*!*color: white;*!*/
+    /*!*padding: 100px;*!*/
+    /*!*height: 200px;*!*/
+    /*text-align: center;*/
 }
 
 footer p {
-    padding: 20px;
-    display: block;
+    text-align: center;
     color: white;
+    width: 100%;
+    padding: 37px 0;
 }
-
-@media only screen and (min-width: 1100px) {
-    .main_1 {
-        float: left;
-        width: 20%;
-        height: 500px;
-        background-color: #f1f1f1;
-    }
-
-    .main_2 {
-        float: left;
-        width: 60%;
-        height: 500px;
-        padding: 15px;
-    }
-
-    .main_3 {
-        float: left;
-        width: 20%;
-        height: 500px;
-        background-color: #f1f1f1;
-    }
-}
-
-/*@media only screen and (min-width: 900px) {*/
-/*    .main_1 {*/
-/*        width: 40%;*/
-/*    }*/
-
-/*    .main_2 {*/
-/*        width: 60%;*/
-/*    }*/
-
-/*    .main_3 {*/
-/*        clear: both;*/
-/*        width: 100%;*/
-/*        height: auto;*/
-/*    }*/
-/*}*/
-
-/*@media only screen and (min-width: 750px) {*/
-/*    .main_1 {*/
-/*        clear: both;*/
-/*        width: 100%;*/
-/*        height: auto;*/
-/*    }*/
-
-/*    .main_1 ul {*/
-/*        padding: 0px;*/
-/*    }*/
-
-/*    .main_1 ul li {*/
-/*        padding: 5px;*/
-/*    }*/
-
-/*    .main_2 {*/
-/*        clear: both;*/
-/*        width: 100%;*/
-/*        height: auto;*/
-/*    }*/
-
-/*    .main_3 {*/
-/*        clear: both;*/
-/*        width: 100%;*/
-/*        height: auto;*/
-/*    }*/
-/*}*/
